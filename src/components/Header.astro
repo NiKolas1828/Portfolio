@@ -1,0 +1,23 @@
+---
+import "../styles/header.css"
+
+const navLinks = [
+    { href: '/', title: 'Inicio' },
+    { href: '/proyectos', title: 'Proyectos' },
+    { href: '/contacto', title: 'Contacto' },
+];
+---
+<header class="main-header">
+    <nav class="nav-container">
+        <a href="/" class="logo">
+            Portafolio
+        </a>
+        <div class="nav-links">
+            {navLinks.map((link) => (
+                <a href={link.href} class="nav-item">
+                    {link.title}
+                </a>
+            ))}
+        </div>
+    </nav>
+</header>
